@@ -1,0 +1,28 @@
+pacman pkgs:
+hyprland qt5-wayland qt6-wayland kitty fastfetch zsh swww flatpak sddm nautilus rofi-wayland ttf-firacode-nerd ttf-jetbrains-mono-nerd xdg-desktop-portal-gtk xdg-desktop-portal-hyprland pipewire-pulse flatpak curl wget zsh git libdbusmenu-gtk3 xdg-user-dirs xdg-user-dirs-gtk
+
+
+flatpak pkgs:
+flatpak install io.gitlab.librewolf-community
+
+
+zsh:
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s $(which zsh)
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+hyprpanel
+
+curl -fsSL https://bun.sh/install | bash && \\
+  sudo ln -s $HOME/.bun/bin/bun /usr/local/bin/bun
+
+sudo pacman -S pipewire bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python gnome-bluetooth-3.0 python-pywal
+yay -S grimblast-git gpu-screen-recorder hyprpicker matugen-bin python-gpustat aylurs-gtk-shell-git
+
+
+
+yay -S auto-cpufreq
