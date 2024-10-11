@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# This scripts was made by https://github.com/freyyrr
-
 # Check if running as root. If root, script will exit
 if [[ $EUID -eq 0 ]]; then
     echo "This script should not be executed as root! Exiting......."
